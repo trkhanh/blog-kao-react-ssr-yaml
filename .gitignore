@@ -1,0 +1,15 @@
+// Built files and vendor
+node_modules
+dist
+coverage
+
+// Platform specific
+.DS_Store
+
+// IDE
+.idea
+.vscode
+.chrome
+
+// Environment
+.env
