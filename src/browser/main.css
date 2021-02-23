@@ -1,0 +1,350 @@
+/*
+ *  __                  __
+ * /\ \                /\ \
+ * \ \ \___   __  __   \_\ \     __
+ *  \ \  _ `\/\ \/\ \  /'_` \  /'__`\
+ *   \ \ \ \ \ \ \_\ \/\ \_\ \/\  __/
+ *    \ \_\ \_\/`____ \ \___,_\ \____\
+ *     \/_/\/_/`/___/> \/__,_ /\/____/
+ *                /\___/
+ *                \/__/
+ *
+ * Modified version of the Hyde theme by @mdo.
+ * https://github.com/poole/hyde.
+ */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  --white: #ffffff;
+  --blue: #268bd2;
+  --stone: #f9f9f9;
+  --apricot: #bf616a;
+  --slate: #9a9a9a;
+  --grey: #515151;
+  --black: #202020;
+}
+
+body {
+  color: var(--grey);
+  background-color: var(--white);
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-display: swap;
+  line-height: 1.5;
+}
+
+@media (min-width: 88em) {
+  html {
+    font-size: 20px;
+  }
+}
+
+/* Links */
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+a strong {
+  color: inherit;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  line-height: 1.25;
+  color: var(--black);
+  text-rendering: optimizeLegibility;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+h3 {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+}
+h4,
+h5,
+h6 {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+/* Body text */
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+strong {
+  color: var(--black);
+}
+
+/* Lists */
+ul,
+ol,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-bottom: 0.5rem;
+}
+
+/* Misc */
+hr {
+  position: relative;
+  margin: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid var(--white);
+  border-bottom: 1px solid var(--white);
+}
+
+/* Code */
+code,
+pre {
+  font-family: "Roboto Mono", monospace;
+}
+code {
+  padding: 0.25em 0.5em;
+  font-size: 85%;
+  color: var(--cabaret);
+  background-color: var(--stone);
+  border-radius: 3px;
+}
+pre {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  overflow: auto;
+  white-space: pre;
+  word-wrap: normal;
+  background-color: var(--stone);
+}
+pre code {
+  padding: 0;
+  font-size: 100%;
+  color: inherit;
+  background-color: transparent;
+}
+
+/* Quotes */
+blockquote {
+  padding: 0.5rem 1rem;
+  margin: 0.8rem 0;
+  color: var(--grey);
+  border-left: 0.25rem solid var(--white);
+}
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 30em) {
+  blockquote {
+    padding-right: 5rem;
+    padding-left: 1.25rem;
+  }
+}
+
+/* Images */
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 0 1rem;
+  border-radius: 5px;
+}
+
+/* Tables */
+table {
+  margin-bottom: 1rem;
+  width: 100%;
+  border: 1px solid var(--white);
+  border-collapse: collapse;
+}
+td,
+th {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--white);
+}
+tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th {
+  background-color: var(--white);
+}
+
+/* Sidebar */
+#sidebar {
+  /* Center the contents of the sidebar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem 1rem;
+  color: var(--white);
+  background-color: var(--black);
+}
+
+@media (min-width: 48em) {
+  /* On mobile the 'sidebar' turns into a header */
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 18rem;
+  }
+}
+
+.avatar {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 5rem;
+}
+
+#nav {
+  text-align: center;
+}
+
+.nav-item,
+.nav-item:hover,
+.nav-item:focus {
+  text-decoration: none;
+}
+
+.nav-item h2 {
+  color: var(--white);
+}
+
+#social {
+  display: flex;
+}
+
+#social .badge {
+  max-width: 2rem;
+  margin: 1rem 0.25rem 0 0.25rem;
+}
+
+/* Content */
+#content {
+  padding: 4 1 4rem;
+  max-width: 38rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media (min-width: 48em) {
+  #content {
+    max-width: 38rem;
+    margin-left: 20rem;
+    margin-right: 2rem;
+  }
+}
+
+@media (min-width: 64em) {
+  #content {
+    max-width: 48rem;
+    margin-left: 22rem;
+    margin-right: 4rem;
+  }
+}
+
+/* Spinner */
+.spinner {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.spinner img {
+  width: 5rem;
+  height: 5rem;
+}
+
+/* Posts */
+#posts {
+  padding: 0;
+  list-style-type: none;
+}
+
+.post .meta {
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+  color: var(--slate);
+}
+
+/* Pagination */
+.pagination {
+  overflow: hidden;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  color: #ccc;
+  text-align: center;
+}
+
+.pagination-item {
+  display: block;
+  padding: 1rem;
+  border: 1px solid #eee;
+}
+
+.pagination-item:first-child {
+  margin-bottom: -1px;
+}
+
+.pagination-item:hover {
+  background-color: var(--stone);
+}
+
+@media (min-width: 30em) {
+  .pagination {
+    margin: 3rem 0;
+  }
+  .pagination-item {
+    float: left;
+    width: 50%;
+  }
+  .pagination-item:first-child {
+    margin-bottom: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  .pagination-item:last-child {
+    margin-left: -1px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+}
