@@ -44,7 +44,7 @@ describe("<Tags/>", () => {
         expect(container.querySelectorAll("a")).toHaveLength(1);
     });
 
-    it('renders multiple tags', () => {
+    it("renders multiple tags", () => {
         const tags = ["Algorithms", "Python"];
         act(() => {
             render(
@@ -55,11 +55,11 @@ describe("<Tags/>", () => {
             );
         });
         expect(container.querySelectorAll("a")).toHaveLength(tags.length);
-    })
+    });
 });
 
 describe("<Tag/>", () => {
-    it('navigates to correct route when clicked', () => {
+    it("navigates to correct route when clicked", () => {
         const tags = ["Algorithms", "Python"];
 
         act(() => {
@@ -68,10 +68,10 @@ describe("<Tag/>", () => {
                     <Tags tags={tags} />
                 </MemoryRouter>,
                 container
-            )
+            );
         });
 
-        const firstLink = container.querySelector("a").href
-        expect(firstLink.endsWith(`/post?tag=${tags[0]}`))
-    })
-})
+        const firstLink = container.querySelector("a").href;
+        expect(firstLink.endsWith(`/post?tag=${tags[0]}`));
+    });
+});
