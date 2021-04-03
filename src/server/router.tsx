@@ -16,7 +16,7 @@ const header = (initialData: Payload): string => {
       <meta name="theme-color" content="#202020">
       <meta name="description" content="Personal blog">
       <meta name="author" content="Bruno Fernandes">
-      <title>bfdes.in</title>
+      <title>kao</title>
       <link href=${Favicon} rel="icon">
       <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap" rel="stylesheet">
       <link href="https://unpkg.com/highlight.js@10.3.1/styles/github.css" rel="stylesheet">
@@ -50,7 +50,8 @@ export default function (db: DB): Router {
   // GET / is an alias for GET /posts
   router.get("/", (req, res) => {
     const posts = db.list();
-
+    console.log('posts', posts);
+    
     const stream = renderToNodeStream(
       <StaticRouter location={req.url}>
         <Context.Posts.Provider value={posts}>
@@ -139,12 +140,12 @@ export default function (db: DB): Router {
   // GET /feed.rss
   router.get("/feed.rss|/feed.xml|/rss.xml", (_, res) => {
     const recentPosts = db.list().slice(0, 10);
-    const title = node("title", "bfdes.in");
-    const link = node("link", "https://www.bfdes.in");
+    const title = node("title", "kaoengine.in");
+    const link = node("link", "https://www.kaoengine.in");
     const description = node("description", "Programming and Technology blog");
     const items = recentPosts.map(({ created, slug, title, summary }) => {
       const date = new Date(created);
-      const url = `https://www.bfdes.in/posts/${slug}`;
+      const url = `https://www.kaoengine.in/posts/${slug}`;
       return node("item", [
         node("title", title),
         node("author", "Bruno Fernandes"),

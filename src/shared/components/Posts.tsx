@@ -108,6 +108,7 @@ class Post extends React.Component<Props, State> {
   }
 
   public render(): React.ReactElement {
+
     const { posts, loading, error } = this.state;
     const { tag } = this.props;
 
@@ -123,12 +124,12 @@ class Post extends React.Component<Props, State> {
       return <Spinner />;
     }
 
-    if (posts.length) {
+
+    if (!posts.length) {
       return (
         <Error>
-          {`There aren't any posts ${
-            tag ? `under ${tag}` : "yet"
-          }. Please come back later.`}
+          {`There aren't any posts ${tag ? `under ${tag}` : "yet"
+            }. Please come back later.`}
         </Error>
       );
     }

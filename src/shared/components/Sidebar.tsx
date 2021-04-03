@@ -19,7 +19,7 @@ const NavBar: React.FC = () => (
 
 const Social: React.FC = () => (
   <div id="social">
-    <a className="nav-item" href="https://www.github.com/bfdes">
+    <a className="nav-item" href="https://www.github.com/kaoengine">
       <img className="badge" src={GitHub} alt="GitHub link" />
     </a>
     <a className="nav-item" href="/feed.rss">
