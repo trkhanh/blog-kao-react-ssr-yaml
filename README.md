@@ -1,10 +1,3 @@
-![GitHub Actions](https://github.com/kaoengine/kaoengine.in/workflows/Test/badge.svg)
-[![Codecov](https://codecov.io/gh/kaoengine/kaoengine.in/branch/master/graph/badge.svg)](https://codecov.io/gh/kaoengine/kaoengine.in)
-
-Source for my personal blog, built using React SSR and written in TypeScript.
-
-The Blog is edited by supplying Markdown documents with YAML frontmatter in a posts directory beneath the root.
-
 When the server-side code is built, the posts are bundled using a custom Webpack loader.
 
 ## Requirements
