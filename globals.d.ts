@@ -13,7 +13,7 @@ declare interface Post extends PostStub {
   previous?: string;
   next?: string;
 }
-
+ 
 declare type Payload = Post | PostStub[];
 
 // Allows image import in TypeScript
@@ -21,3 +21,10 @@ declare module "*.png";
 
 // Read-only build flag set by Webpack
 declare const __isBrowser__: boolean;
+
+export interface Global {
+  document: Document;
+  window: Window;
+}
+
+declare const global: Global;
