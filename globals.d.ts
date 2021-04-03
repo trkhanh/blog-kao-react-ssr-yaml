@@ -13,7 +13,7 @@ declare interface Post extends PostStub {
   previous?: string;
   next?: string;
 }
- 
+
 declare type Payload = Post | PostStub[];
 
 // Allows image import in TypeScript
