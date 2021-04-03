@@ -8,7 +8,6 @@ import { RequestListener } from "http";
 
 import DB from "shared/db";
 import router from "./router";
-import { Post } from "globals";
 
 export default function (posts: Post[], mode = "test"): RequestListener {
   const app = express();
