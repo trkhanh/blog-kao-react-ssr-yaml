@@ -17,14 +17,31 @@ declare interface Post extends PostStub {
 declare type Payload = Post | PostStub[];
 
 // Allows image import in TypeScript
-declare module "*.png";
+declare module "*.png" {
+  const content: string;
+  export default content;
+}
+declare module "*.jpg" {
+  const content: string;
+  export default content;
+}
+declare module "*.svg" {
+  const content: string;
+  export default content;
+}
 
 // Read-only build flag set by Webpack
 declare const __isBrowser__: boolean;
 
-export interface Global {
-  document: Document;
-  window: Window;
+// Mocked values set in Jest test code
+declare namespace NodeJS {
+  interface Global {
+    __isBrowser__: boolean;
+    fetch: jest.Mock;
+  }
 }
 
-declare const global: Global;
+// Data for deferred render supplied by the server
+declare interface Window {
+  __INITIAL_DATA__: Payload;
+}
