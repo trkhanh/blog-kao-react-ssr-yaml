@@ -50,8 +50,8 @@ export default function (db: DB): Router {
   // GET / is an alias for GET /posts
   router.get("/", (req, res) => {
     const posts = db.list();
-    console.log('posts', posts);
-    
+    console.log("posts", posts);
+
     const stream = renderToNodeStream(
       <StaticRouter location={req.url}>
         <Context.Posts.Provider value={posts}>
