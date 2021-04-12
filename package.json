@@ -58,7 +58,7 @@
     "url-loader": "^4.1.1",
     "vfile": "^4.2.1",
     "vfile-matter": "^2.0.0",
-    "webpack": "^5.15.0",
+    "webpack": "^5.31.2",
     "webpack-cli": "^4.3.1"
   }
 }
